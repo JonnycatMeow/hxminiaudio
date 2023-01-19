@@ -11,9 +11,16 @@ not my code
 		if (FileSystem.exists(file(key, "music", "opus")))
 			return file(key, "music", "opus");
 		return music(key);
-	} 
+	}  
  ``` 
- 
- 
+ 2. go in playstate and pate this variables 
+ ``` 
+ var music:AudioStreamThing;
+ var vocals:AudioStreamThing;  
+ ``` 
+ 3. go into playstate where the override public function create paste this there 
+ ```
+music = new AudioStreamThing(Paths.opus(SONG.song + "_Inst"), true); 
+```
  
  doggy-dentures made the code
