@@ -56,9 +56,6 @@ music = new AudioStreamThing(Paths.opus(SONG.song + "_Inst"), true);
 			} 
             ```  
       
-        
-	
-	
       8. and finally paste this into the override public function destroy 
        ``` 
        AudioStreamThing.destroyGroup(); 
