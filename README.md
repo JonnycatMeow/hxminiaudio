@@ -45,6 +45,23 @@ music = new AudioStreamThing(Paths.opus(SONG.song + "_Inst"), true);
 				// vocals.pause();
 				AudioStreamThing.pauseGroup();
 			}
-	```
+	``` 
+	
+	7. go into playstate where you will find a function called  closeSubState and paste it there  where it says if paused  
+	``` 
+	if (music != null && !startingSong)
+			{
+				AudioStreamThing.playGroup();
+				resyncVocals();
+			} 
+            ```  
+      
+        
+	
+	
+      8. and finally paste this into the override public function destroy 
+       ``` 
+       AudioStreamThing.destroyGroup(); 
+       ```
        
  doggy-dentures made the code
