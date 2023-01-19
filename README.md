@@ -6,3 +6,5 @@ not my code
  2. replace FlxSoundTray with AudioStreamThing.  
  3. your done
  
+ 
+ doggy-dentures made the code
