@@ -21,6 +21,30 @@ not my code
  3. go into playstate where the override public function create paste this there 
  ```
 music = new AudioStreamThing(Paths.opus(SONG.song + "_Inst"), true); 
-```
- 
+``` 
+4. go into playstate where the function startSong paste this there
+ ``` 
+ AudioStreamThing.playGroup(); 
+ ```
+ 5. go into playstate where you will find a function called generateSong 
+    ```  
+    if (SONG.needsVoices)
+		{
+			// vocals = new FlxSound().loadEmbedded(Paths.music(curSong + "_Voices"));
+			vocals = new AudioStreamThing(Paths.opus(curSong + "_Voices"), true);
+		}
+		else
+			vocals = new AudioStreamThing(''); 
+    ```
+     
+     6. go into playstate where you will find a function called openSubState and paste it there  
+      ``` 
+      if (music != null)
+			{
+				// music.pause();
+				// vocals.pause();
+				AudioStreamThing.pauseGroup();
+			}
+	```
+       
  doggy-dentures made the code
