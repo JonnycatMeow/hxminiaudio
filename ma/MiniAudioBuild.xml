@@ -3,7 +3,8 @@
 
 	<files id='haxe'>
 		<compilervalue name="-I" value="${PROJECT_DIR}/" />
-		<compilervalue name="-I" value="${PROJECT_DIR}/include" />
+		<compilervalue name="-I" value="${PROJECT_DIR}/include" /> 
+		<compilervalue name="-I" value="${PROJECT_DIR}/extras" />
 	</files>
 
 	<target id='haxe' tool='linker' toolid='exe' if='windows'>
