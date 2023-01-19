@@ -18,5 +18,10 @@
 		<lib name='${PROJECT_DIR}/lib/Mac64/libogg.a' if='HXCPP_M64' />
 		<lib name='${PROJECT_DIR}/lib/Mac64/libopus.a' if='HXCPP_M64' />
 		<lib name='${PROJECT_DIR}/lib/Mac64/libopusfile.a' if='HXCPP_M64' />
+	</target> 
+	<target id='haxe' tool='linker' if='ios'>
+		<lib name='${PROJECT_DIR}/lib/iphone/libogg.a' />
+		<lib name='${PROJECT_DIR}/lib/iphone/libopus.a' />
+		<lib name='${PROJECT_DIR}/lib/iphone/libopusfile.a' />
 	</target>
 </xml>
