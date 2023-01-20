@@ -7,22 +7,38 @@
 		<compilervalue name="-I" value="${PROJECT_DIR}/extras" />
 	</files>
 
-	<target id='haxe' tool='linker' toolid='exe' if='windows'>
-		<lib name='${PROJECT_DIR}/lib/windows64/libogg.lib' if='HXCPP_M64' />
-		<lib name='${PROJECT_DIR}/lib/windows64/opus.lib' if='HXCPP_M64' />
-		<lib name='${PROJECT_DIR}/lib/windows64/opusfile.lib' if='HXCPP_M64' />
-		<lib name='${PROJECT_DIR}/lib/windows32/libogg.lib' if='HXCPP_M32' />
-		<lib name='${PROJECT_DIR}/lib/windows32/opus.lib' if='HXCPP_M32' />
-		<lib name='${PROJECT_DIR}/lib/windows32/opusfile.lib' if='HXCPP_M32' />
+	<target id='haxe' tool='linker' toolid='exe' if='windows'> 
+	    <!--ogg files--> 
+		<lib name='${PROJECT_DIR}/lib/windows64/ogg/libogg.lib' if='HXCPP_M64' /> 
+		<!--opus files--> 
+		<lib name='${PROJECT_DIR}/lib/windows64/opus/opus.lib' if='HXCPP_M64' />
+		<lib name='${PROJECT_DIR}/lib/windows64/opus/opusfile.lib' if='HXCPP_M64' /> 
+		<!--ogg files-->  
+		<lib name='${PROJECT_DIR}/lib/windows32/ogg/libogg.lib' if='HXCPP_M32' /> 
+		<!--opus files--> 
+		<lib name='${PROJECT_DIR}/lib/windows32/opus/opus.lib' if='HXCPP_M32' />
+		<lib name='${PROJECT_DIR}/lib/windows32/opus/opusfile.lib' if='HXCPP_M32' />
 	</target> 
-	<target id='haxe' tool='linker' if='mac'>
-		<lib name='${PROJECT_DIR}/lib/Mac64/libogg.a' if='HXCPP_M64' />
-		<lib name='${PROJECT_DIR}/lib/Mac64/libopus.a' if='HXCPP_M64' />
-		<lib name='${PROJECT_DIR}/lib/Mac64/libopusfile.a' if='HXCPP_M64' />
+	<target id='haxe' tool='linker' if='mac'> 
+	    <!--ogg files-->
+		<lib name='${PROJECT_DIR}/lib/Mac64/ogg/libogg.a' if='HXCPP_M64' /> 
+		<!--opus files-->
+		<lib name='${PROJECT_DIR}/lib/Mac64/opus/libopus.a' if='HXCPP_M64' />
+		<lib name='${PROJECT_DIR}/lib/Mac64/opus/libopusfile.a' if='HXCPP_M64' />  
+		<!--vorbis files-->
+		<lib name='${PROJECT_DIR}/lib/Mac64/vorbis/libvorbis.a' if='HXCPP_M64' />
+		<lib name='${PROJECT_DIR}/lib/Mac64/vorbis/libvorbisenc.a' if='HXCPP_M64' />
+		<lib name='${PROJECT_DIR}/lib/Mac64/vorbis/libvorbisfile.a' if='HXCPP_M64' />
 	</target> 
-	<target id='haxe' tool='linker' if='ios'>
-		<lib name='${PROJECT_DIR}/lib/iphone/libogg.a' />
-		<lib name='${PROJECT_DIR}/lib/iphone/libopus.a' />
-		<lib name='${PROJECT_DIR}/lib/iphone/libopusfile.a' />
+	<target id='haxe' tool='linker' if='ios'> 
+	    <!--ogg files-->  
+		<lib name='${PROJECT_DIR}/lib/iphone/ogg/libvorbis.a' /> 
+		<!--opus files--> 
+		<lib name='${PROJECT_DIR}/lib/iphone/opus/libopus.a' />
+		<lib name='${PROJECT_DIR}/lib/iphone/opus/libopusfile.a' />  
+		<!--vorbis files-->
+		<lib name='${PROJECT_DIR}/lib/iphone/vorbis/libvorbis.a' />
+		<lib name='${PROJECT_DIR}/lib/iphone/vorbis/libvorbisenc.a' />
+		<lib name='${PROJECT_DIR}/lib/iphone/vorbis/libvorbisfile.a' />
 	</target>
 </xml>
