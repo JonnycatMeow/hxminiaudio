@@ -1,7 +1,9 @@
+package miniaudio;
+
 import cpp.ConstCharStar;
 import cpp.RawPointer;
 
-@:buildXml('<include name="../../../../source/ma/MiniAudioBuild.xml" />')
+@:buildXml('<include name="../../../../MiniAudioBuild.xml" />')
 @:include("miniaudio.h")
 @:unreflective
 @:structAccess
@@ -9,7 +11,7 @@ import cpp.RawPointer;
 @:native("ma_engine")
 extern class MAEngine {}
 
-@:buildXml('<include name="../../../../source/ma/MiniAudioBuild.xml" />')
+@:buildXml('<include name="../../../../MiniAudioBuild.xml" />')
 @:include("miniaudio.h")
 @:unreflective
 @:structAccess
@@ -17,7 +19,7 @@ extern class MAEngine {}
 @:native("ma_sound")
 extern class MASound {}
 
-@:buildXml('<include name="../../../../source/ma/MiniAudioBuild.xml" />')
+@:buildXml('<include name="../../../../MiniAudioBuild.xml" />')
 @:include("miniaudio.h")
 @:unreflective
 @:structAccess
@@ -25,7 +27,7 @@ extern class MASound {}
 @:native("ma_sound_group")
 extern class MAGroup {}
 
-@:buildXml('<include name="../../../../source/ma/MiniAudioBuild.xml" />')
+@:buildXml('<include name="../../../../MiniAudioBuild.xml" />')
 @:include("miniaudio.h")
 @:unreflective
 @:structAccess
@@ -33,7 +35,7 @@ extern class MAGroup {}
 @:native("ma_resource_manager")
 extern class MAResMan {}
 
-@:buildXml('<include name="../../../../source/ma/MiniAudioBuild.xml" />')
+@:buildXml('<include name="../../../../MiniAudioBuild.xml" />')
 @:include("audiostuff.cpp")
 @:unreflective
 @:keep

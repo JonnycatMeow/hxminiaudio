@@ -1,4 +1,4 @@
-package;
+package miniaudio;
 
 import flixel.FlxG;
 import openfl.media.SoundTransform;

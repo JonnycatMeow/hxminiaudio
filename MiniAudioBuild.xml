@@ -1,0 +1,43 @@
+<xml>
+
+	<files id='haxe'>
+		<compilervalue name="-I" value="${haxelib:hxminiaudio}/lib/miniaudio/include/" /> 
+		<compilervalue name="-I" value="${haxelib:hxminiaudio}/lib/miniaudio/extras/" /> 
+		<compilervalue name="-I" value="${haxelib:hxminiaudio}/lib/miniaudio/src/miniaudio.cpp" />
+	</files>
+
+	<target id='haxe' tool='linker' toolid='exe' if='windows'> 
+	    <!--ogg files--> 
+		<lib name='${haxelib:hxminiaudio}/lib/miniaudio/lib/windows64/ogg/libogg.lib' if='HXCPP_M64' /> 
+		<!--opus files--> 
+		<lib name='${haxelib:hxminiaudio}/lib/miniaudio/lib/windows64/opus/opus.lib' if='HXCPP_M64' />
+		<lib name='${haxelib:hxminiaudio}/lib/miniaudio/lib/windows64/opus/opusfile.lib' if='HXCPP_M64' /> 
+		<!--ogg files-->  
+		<lib name='${haxelib:hxminiaudio}/lib/miniaudio/lib/windows32/ogg/libogg.lib' if='HXCPP_M32' /> 
+		<!--opus files--> 
+		<lib name='${haxelib:hxminiaudio}/lib/miniaudio/lib/windows32/opus/opus.lib' if='HXCPP_M32' />
+		<lib name='${haxelib:hxminiaudio}/lib/miniaudio/lib/windows32/opus/opusfile.lib' if='HXCPP_M32' />
+	</target> 
+	<target id='haxe' tool='linker' if='mac'> 
+	    <!--ogg files-->
+		<lib name='${haxelib:hxminiaudio}/lib/miniaudio/lib/Mac64/ogg/libogg.a' if='HXCPP_M64' /> 
+		<!--opus files-->
+		<lib name='${haxelib:hxminiaudio}/lib/miniaudio/lib/Mac64/opus/libopus.a' if='HXCPP_M64' />
+		<lib name='${haxelib:hxminiaudio}/lib/miniaudio/lib/Mac64/opus/libopusfile.a' if='HXCPP_M64' />  
+		<!--vorbis files-->
+		<lib name='${haxelib:hxminiaudio}/lib/miniaudio/lib/Mac64/vorbis/libvorbis.a' if='HXCPP_M64' />
+		<lib name='${haxelib:hxminiaudio}/lib/miniaudio/lib/Mac64/vorbis/libvorbisenc.a' if='HXCPP_M64' />
+		<lib name='${haxelib:hxminiaudio}/lib/miniaudio/lib/Mac64/vorbis/libvorbisfile.a' if='HXCPP_M64' />
+	</target> 
+	<target id='haxe' tool='linker' if='ios'> 
+	    <!--ogg files-->  
+		<lib name='${haxelib:hxminiaudio}/lib/miniaudio/lib/iphone/ogg/libvorbis.a' if="HXCPP_ARM64" /> 
+		<!--opus files--> 
+		<lib name='${haxelib:hxminiaudio}/lib/miniaudio/lib/iphone/opus/libopus.a' if="HXCPP_ARM64" />
+		<lib name='${haxelib:hxminiaudio}/lib/miniaudio/lib/iphone/opus/libopusfile.a' if="HXCPP_ARM64" />  
+		<!--vorbis files-->
+		<lib name='${haxelib:hxminiaudio}/lib/miniaudio/lib/iphone/vorbis/libvorbis.a' if="HXCPP_ARM64"/>
+		<lib name='${haxelib:hxminiaudio}/lib/miniaudio/lib/iphone/vorbis/libvorbisenc.a' if="HXCPP_ARM64"/>
+		<lib name='${haxelib:hxminiaudio}/lib/miniaudio/lib/iphone/vorbis/libvorbisfile.a' if="HXCPP_ARM64"/>
+	</target>
+</xml>

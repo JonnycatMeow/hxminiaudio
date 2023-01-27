@@ -1,0 +1,21 @@
+{
+	"name": "hxminiaudio",
+	"url": "https://github.com/JonnycatMeow/hxminiaudio.git",
+	"license": "MIT",
+	"tags": [
+		"audio",
+		"haxeflixel",
+		"openfl",
+		"windows",
+		"mac",
+		"linux",
+		"android",
+		"iphone"
+	],
+	"description": "Native Audio support for HaxeFlixel & OpenFL",
+	"version": "1.0.0",
+	"releasenote": "made it a haxelib",
+	"contributors": [
+		"McJonnycat"
+	]
+}

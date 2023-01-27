@@ -1,13 +1,13 @@
 #define STB_VORBIS_HEADER_ONLY
-#include "extras/stb_vorbis.c"
+#include "../extras/stb_vorbis.c"
 
 #define MA_NO_OPUS
 #define MINIAUDIO_IMPLEMENTATION
 #include "miniaudio.h"
-#include "extras/miniaudio_libopus.h"
+#include "../extras/miniaudio_libopus.h"
 
 #undef STB_VORBIS_HEADER_ONLY
-#include "extras/stb_vorbis.c"
+#include "../extras/stb_vorbis.c"
 
 static ma_result ma_decoding_backend_init__libopus(void* pUserData, ma_read_proc onRead, ma_seek_proc onSeek, ma_tell_proc onTell, void* pReadSeekTellUserData, const ma_decoding_backend_config* pConfig, const ma_allocation_callbacks* pAllocationCallbacks, ma_data_source** ppBackend)
 {

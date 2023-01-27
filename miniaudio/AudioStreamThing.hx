@@ -1,3 +1,5 @@
+package miniaudio; 
+
 import MiniAudio.MAResMan;
 import MiniAudio.MAGroup;
 import flixel.FlxG;
